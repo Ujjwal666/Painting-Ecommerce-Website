@@ -1,0 +1,15 @@
+.orders{
+	padding: 20px 80px;
+	background-color: #ffdcba;
+}
+.orders > h1{
+	margin: 30px 0;
+	font-weight: 500;
+	padding: 20px; 
+}
+@media screen and (max-width: 600px){
+	.orders{
+		padding: 0px;
+		margin-top: -30px;
+	}
+}

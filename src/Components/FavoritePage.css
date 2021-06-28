@@ -1,0 +1,8 @@
+.favorite_page{
+	background-color: #ffdcba;
+	height: auto;
+	padding: 20px;
+}
+.favorite_page > h2{
+	font-weight: 500;
+}

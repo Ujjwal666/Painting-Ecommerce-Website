@@ -1,0 +1,151 @@
+.product_page{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background-color: #ffdcba;
+}
+.products_list_top{
+	display: flex;
+	flex-direction: row;
+}
+.h{
+	display: flex;
+	align-items: center;
+}
+.products_list_bottom{
+	display: flex;
+	justify-content: flex-start;
+}
+.filter{
+	background-color: #ffdcba;
+	width: auto;
+	flex-grow: 1;
+	display: flex;
+	border-bottom: 1px solid black;
+}
+.filter .filter_icon{
+	margin-left: 10px;
+	display: none;
+}
+.filter .filter_icon:hover{
+	display: none;
+}
+.products_list{
+	flex-grow: 4;
+}
+.sort{
+	display: flex;
+	justify-content: flex-end;
+}
+.sort > p{
+	padding: 4px;
+}
+.products_listing{
+	padding: 10px; 
+	padding-top: 5px;
+}
+.filter_lists{
+	width: 400px;
+}
+.product_list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.design{
+	padding-top: 5px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid black;
+}
+.design > p{
+	padding-bottom: 5px;
+}
+.horizontal_products{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.horizontal_product{
+	display: flex;
+	margin-top: 10px;
+}
+.horizontal_product > img{
+	height: 366px;
+}
+.same > p{
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.info{
+	font-size: 15px;
+	font-weight: 400;
+}
+.horizontal_product_price{
+	display: flex;
+}
+.horizontal_product_info{
+	padding-left: 20px;
+	background-color: white;
+	height: 366px;
+}	
+.horizontal_icons{
+	display: flex;
+}
+.fav_icon{
+	display: flex;
+	justify-content: center;
+	margin-right: 20px;
+	margin-top: 20px;
+	padding: 5px;
+	background-color: #ffdcba;
+	color: black;
+	border-radius: 5px;
+	width: 150px;
+	height: 20px;
+	cursor: pointer;
+}
+.cart_icon{
+	display: flex;
+	background-color: white;
+	justify-content: center;
+	padding: 5px;
+	margin-top: 20px;
+	background-color: #ffdcba;
+	color: black;
+	border-radius: 5px;
+	width: 150px;
+	height: 20px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+.fav_icon:hover, .cart_icon:hover{
+	background-color: #755139FF;
+	color: white;
+	transition: 0.5s ease;
+}
+.design{
+	display: flex;
+	flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+	.products_list{
+		display: flex;
+		flex-direction: column;
+	}
+	.filter_lists{
+		display: none;
+	}
+	.filter .filter_icon{
+		display: block;
+	}
+	.horizontal_icons{
+		display: block;
+	}
+	.horizontal_products{
+		display: block;
+		width: 100%;
+		justify-content: space-between;
+	}
+}	

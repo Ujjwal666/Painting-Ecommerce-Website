@@ -1,0 +1,23 @@
+.categories{
+	align-items: center;
+}
+.checkbox{
+	height: 30px;
+	width: 30px;
+}
+.categories input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  z-index: -1;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.categories label {
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+}
