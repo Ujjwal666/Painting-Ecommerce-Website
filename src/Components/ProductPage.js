@@ -19,25 +19,26 @@ function ProductPage({}) {
 	const [productData, setProductData] = useState([])
 	const [filteredList, setfilteredList] = useState("")
 	const [filteredValues, setfilteredValues] = useState([])
+
 	const [checked, setChecked] = useState(false)
 	
-	useEffect(() => {
-		db
-			.collection('products')
-			.onSnapshot(snapshot => (
-				setProductData(snapshot.docs.map(doc => ({
-					data: doc.data()
-				}))),
-				setfilteredValues(snapshot.docs.map(doc => ({
-					data: doc.data()
-				})))
-			))	
-	}, [])
+	// useEffect(() => {
+	// 	db
+	// 		.collection('products')
+	// 		.onSnapshot(snapshot => (
+	// 			setProductData(snapshot.docs.map(doc => ({
+	// 				data: doc.data()
+	// 			}))),
+	// 			setfilteredValues(snapshot.docs.map(doc => ({
+	// 				data: doc.data()
+	// 			})))
+	// 		))	
+	// }, [])
 
 	useEffect(() => {
 		setfilteredValues(
-			productData.filter((product)=>
-				product.data.categories.toLowerCase().includes(filteredList.toLowerCase())
+			ProductData.filter((product)=>
+				product.categories.toLowerCase().includes(filteredList.toLowerCase())
 			)
 		);
 	},[checked]);
@@ -46,13 +47,13 @@ function ProductPage({}) {
 		if (dropdown == "HtoL"){
 			setDropHtoL(
 				filteredValues.sort((a,b)=>
-					(a.data.price > b.data.price) ? -1:1
+					(a.price > b.price) ? -1:1
 				)
 			);
 		}else if(dropdown == "LtoH"){
 			setDropLtoH(
 				filteredValues.sort((a,b)=>
-					(a.data.price > b.data.price) ? 1:-1
+					(a.price > b.price) ? 1:-1
 				)
 			);
 		}
@@ -296,41 +297,41 @@ function ProductPage({}) {
 							{dropdown.includes("HtoL") || checked ? 
 								dropHtoL.map((product) => (
 					        		<Product
-					        			id={product.data.id}
-					        			title={product.data.title}
-					        			image={product.data.image}
-					        			price={product.data.price}  
-					        			info={product.data.info}
-					        			categories={product.data.categories}
-					        			sale={product?.data.sale}
-					        			size={product?.data.size}
+					        			id={product.id}
+					        			title={product.title}
+					        			image={product.image}
+					        			price={product.price}  
+					        			info={product.info}
+					        			categories={product.categories}
+					        			sale={product?.sale}
+					        			size={product?.size}
 					        		
 					        		/>
 					        	)) : (
 					        	dropdown.includes("LtoH") || checked ? 
 					        		dropLtoH.map((product) => (
 						        		<Product
-						        			id={product.data.id}
-						        			title={product.data.title}
-						        			image={product.data.image}
-						        			price={product.data.price}  
-						        			info={product.data.info}
-						        			categories={product.data.categories}
-						        			sale={product?.data.sale}
-						        			size={product?.data.size}
+						        			id={product.id}
+						        			title={product.title}
+						        			image={product.image}
+						        			price={product.price}  
+						        			info={product.info}
+						        			categories={product.categories}
+						        			sale={product?.sale}
+						        			size={product?.size}
 						        			
 						        		/>
 						        	)) : (
-						        		productData.map((product) => (
+						        		ProductData.map((product) => (
 							        		<Product
-							        			id={product.data.id}
-							        			title={product.data.title}
-							        			image={product.data.image}
-							        			price={product.data.price}  
-							        			info={product.data.info}
-							        			categories={product.data.categories}
-							        			sale={product?.data.sale}
-							        			size={product?.data.size}
+							        			id={product.id}
+							        			title={product.title}
+							        			image={product.image}
+							        			price={product.price}  
+							        			info={product.info}
+							        			categories={product.categories}
+							        			sale={product?.sale}
+							        			size={product?.size}
 							    
 							        		/>
 							        	))

@@ -14,19 +14,20 @@ function ProductDetail({id,title,image,price,info,categories,size}) {
 	const [productsData,setProductsData] = useState([]);
 
 	useEffect(() => {
-		db
-			.collection('products')
-			.onSnapshot(snapshot => (
-				setProductsData(snapshot.docs.map(doc => ({
-					data: doc.data()
-				})))
-			))	
+		// db
+		// 	.collection('products')
+		// 	.onSnapshot(snapshot => (
+		// 		setProductsData(snapshot.docs.map(doc => ({
+		// 			data: doc.data()
+		// 		})))
+		// 	))
+		setProductsData(ProductData)	
 	}, [])
 
 	useEffect(() => {
 		setRelated(
 			productsData.filter((product)=>
-				product.data.categories.toLowerCase().includes(current[0]?.categories?.toLowerCase())
+				product.categories.toLowerCase().includes(current[0]?.categories?.toLowerCase())
 			)
 		);
 	},[productsData]);
@@ -110,14 +111,14 @@ function ProductDetail({id,title,image,price,info,categories,size}) {
 					<div className="related_product">
 						{related.map((product)=>(
 							<Product
-			        			id={product.data.id}
-			        			title={product.data.title}
-			        			image={product.data.image}
-			        			price={product.data.price}  
-			        			info={product.data.info}
-			        			categories={product.data.categories}
-			        			sale={product?.data.sale}
-			        			size={product?.data.size}
+			        			id={product.id}
+			        			title={product.title}
+			        			image={product.image}
+			        			price={product.price}  
+			        			info={product.info}
+			        			categories={product.categories}
+			        			sale={product?.sale}
+			        			size={product?.size}
 			        		/>
 						))}
 					</div>

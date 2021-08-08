@@ -7,6 +7,7 @@ import ProductPage from "./ProductPage"
 import {Link} from 'react-router-dom';
 import {useStateValue} from "./StateProvider"
 import {db} from "./Firebase/Firebase"
+import ProductData from "./Products.json"
 
 function Home({id,title,image,price,info}) {
 
@@ -16,18 +17,19 @@ function Home({id,title,image,price,info}) {
 	const [featuredSlide, setFeaturedSlide] = useState([])
 
 	useEffect(() => {
-		db
-			.collection('products')
-			.onSnapshot(snapshot => (
-				setProductsData(snapshot.docs.map(doc => ({
-					data: doc.data()
-				})))
-			))	
-		setFeatured(
-			productsData.splice(0,6)
-		)	
-		setFeaturedSlide(productsData.splice(1,13))
-	}, [productsData])
+		// db
+		// 	.collection('products')
+		// 	.onSnapshot(snapshot => (
+		// 		setProductsData(snapshot.docs.map(doc => ({
+		// 			data: doc.data()
+		// 		})))
+		// 	))	
+		// setFeatured(
+		// 	productsData.splice(0,6)
+		// )	
+		setFeatured(ProductData.splice(0,6))
+		setFeaturedSlide(ProductData.splice(1,13))
+	}, [ProductData])
 
 	return (
 		<div className="home">
@@ -38,14 +40,14 @@ function Home({id,title,image,price,info}) {
 			<div className="products">
 				{featured.map((product)=>(
 					<Product 
-						id={product.data.id}
-	        			title={product.data.title}
-	        			image={product.data.image}
-	        			price={product.data.price}  
-	        			info={product.data.info}
-	        			categories={product.data.categories}
-	        			sale={product?.data.sale}
-	        			size={product?.data.size}
+						id={product.id}
+	        			title={product.title}
+	        			image={product.image}
+	        			price={product.price}  
+	        			info={product.info}
+	        			categories={product.categories}
+	        			sale={product?.sale}
+	        			size={product?.size}
 					/>
 
 				))}
@@ -79,7 +81,7 @@ function Home({id,title,image,price,info}) {
 				<div className="slide_track">
 						{featuredSlide.map((imag)=>(
 							<div className="slid">
-								<img src={imag.data.image} />
+								<img src={imag.image} />
 							</div>
 						))
 						}

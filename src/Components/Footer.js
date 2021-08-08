@@ -95,7 +95,9 @@ function Footer() {
 			  		<a href="https://www.facebook.com/Nepalinters-104948571838777">
 				  		<FacebookIcon />
 				  	</a>
-				  	<InstagramIcon />
+				  	<a href="https://www.instagram.com/_nepalinters/">
+				  		<InstagramIcon />
+				  	</a>
 				  	<TwitterIcon />
 				</div>  	
 			</div>
