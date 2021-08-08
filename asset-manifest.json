@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Painting-Ecommerce-Website/static/css/main.41c86754.chunk.css",
+    "main.js": "/Painting-Ecommerce-Website/static/js/main.c6087bfd.chunk.js",
+    "main.js.map": "/Painting-Ecommerce-Website/static/js/main.c6087bfd.chunk.js.map",
+    "runtime-main.js": "/Painting-Ecommerce-Website/static/js/runtime-main.be7bab6a.js",
+    "runtime-main.js.map": "/Painting-Ecommerce-Website/static/js/runtime-main.be7bab6a.js.map",
+    "static/css/2.6b560088.chunk.css": "/Painting-Ecommerce-Website/static/css/2.6b560088.chunk.css",
+    "static/js/2.aafffa9c.chunk.js": "/Painting-Ecommerce-Website/static/js/2.aafffa9c.chunk.js",
+    "static/js/2.aafffa9c.chunk.js.map": "/Painting-Ecommerce-Website/static/js/2.aafffa9c.chunk.js.map",
+    "static/js/3.3ab6accf.chunk.js": "/Painting-Ecommerce-Website/static/js/3.3ab6accf.chunk.js",
+    "static/js/3.3ab6accf.chunk.js.map": "/Painting-Ecommerce-Website/static/js/3.3ab6accf.chunk.js.map",
+    "index.html": "/Painting-Ecommerce-Website/index.html",
+    "static/css/2.6b560088.chunk.css.map": "/Painting-Ecommerce-Website/static/css/2.6b560088.chunk.css.map",
+    "static/css/main.41c86754.chunk.css.map": "/Painting-Ecommerce-Website/static/css/main.41c86754.chunk.css.map",
+    "static/js/2.aafffa9c.chunk.js.LICENSE.txt": "/Painting-Ecommerce-Website/static/js/2.aafffa9c.chunk.js.LICENSE.txt",
+    "static/media/add.23f6f0c5.jpg": "/Painting-Ecommerce-Website/static/media/add.23f6f0c5.jpg",
+    "static/media/logo.fd0b81c2.png": "/Painting-Ecommerce-Website/static/media/logo.fd0b81c2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.be7bab6a.js",
+    "static/css/2.6b560088.chunk.css",
+    "static/js/2.aafffa9c.chunk.js",
+    "static/css/main.41c86754.chunk.css",
+    "static/js/main.c6087bfd.chunk.js"
+  ]
+}
